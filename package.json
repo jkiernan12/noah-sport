@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@react-hook/window-size": "^3.0.7",
     "gatsby": "^4.7.1",
     "gatsby-plugin-image": "^2.7.0",
     "gatsby-plugin-sass": "^5.7.0",

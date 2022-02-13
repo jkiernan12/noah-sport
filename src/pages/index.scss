@@ -1,7 +1,11 @@
 @import "~react-image-gallery/styles/scss/image-gallery.scss";
 
-$primary-color: rgb(162, 17, 17);
+$primary-color: rgb(17, 162, 162);
+$body-color: black;
 $decorative-font: 'Praise', serif;
+$background-color: white;
+$header-text: white;
+$header-background: black;
 
 html {
   scroll-behavior: smooth;
@@ -10,9 +14,10 @@ html {
 body {
   min-height: 100vh;
   width: 100%;
-  background-color: rgb(251, 238, 223);
+  background-color: $background-color;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  color: $body-color;
 }
 
 img {
@@ -30,12 +35,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border-bottom:2px solid $primary-color;
-  width: 80%;
-  margin: auto;
+  width: 100%;
+  background-color: $header-background;
 
   .logo-container {
-
+    margin: 0 2% 0 5%;
     
     h1 {
       color: $primary-color;
@@ -43,6 +47,11 @@ header {
       text-align: center;
       font-size: 3em;
       margin: 0;
+    }
+
+    .logo-image {
+      max-width: 200px;
+      margin: 2%;
     }
 
     p {
@@ -53,26 +62,29 @@ header {
   nav {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    border-bottom: 2px solid $primary-color;
+    width: 100%;
+    margin: 0 5% 2% 2%;
 
     button {
       margin: 8px;
       border: none;
       background-color: #00000000;
       cursor: pointer;
-      font-size: 1em;
+      font-size: 1.3em;
+      color: $header-text;
     }
   }
-
 }
 
 .hero {
   width: 100%;
   height: 600px;
   background: linear-gradient( rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.3) ), url('../images/cover.jpeg');
-  background-position: center;
+  background-position: 50% 65%;
   background-size: cover;
-  margin: 3em 0;
+  margin: 0 0 3em 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,7 +171,7 @@ header {
 
       button {
         background-color: $primary-color;
-        color: white;
+        color: $body-color;
       }
       
       a {
