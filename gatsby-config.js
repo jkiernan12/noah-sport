@@ -10,5 +10,10 @@ module.exports = {
       "path": "./src/images/"
     },
     __key: "images"
-  }]
+  }, {
+    resolve: 'gatsby-plugin-web-font-loader',
+    options: {
+      google: {
+        families: ['Praise']
+      }}}]
 };
