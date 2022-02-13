@@ -6,6 +6,8 @@ $decorative-font: 'Praise', serif;
 $background-color: white;
 $header-text: white;
 $header-background: black;
+$contact-text: white;
+$contact-background: rgb(17, 162, 162);
 
 html {
   scroll-behavior: smooth;
@@ -74,6 +76,11 @@ header {
       cursor: pointer;
       font-size: 1.3em;
       color: $header-text;
+      transition: .1s;
+
+      &:hover {
+        color: $primary-color;
+      }
     }
   }
 }
@@ -93,6 +100,7 @@ header {
     color: white;
     text-align: center;
     font-size: 3em;
+    max-width: 1100px;
   }
 
 }
@@ -132,20 +140,48 @@ header {
 
 }
 
+footer {
+  width: 100%;
+  background-color: $header-background;
+  color: $header-text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+
+  a, p {
+    color: $header-text;
+    text-decoration: none;
+    margin: 10px;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  img {
+    width: 30px;
+  }
+}
+
 .contact {
-  max-width: 400px;
-  margin: 10% auto;
+  padding: 8% 0;
+  margin: 0;
+  color: $contact-text;
+  background-color: $contact-background;
 
   article {
-    margin: 2%;
+    margin: auto;
+    max-width: 400px;
     
     h3 {
-      border-bottom: 2px solid $primary-color;
+      border-bottom: 2px solid $contact-text;
       width: 60%;
+      color: $contact-text
     }
     
     .email a {
-      color: $primary-color;
+      color: $contact-text;
       font-weight: bold;
     }
   }
@@ -165,7 +201,8 @@ header {
     }
 
     nav {
-      border-top: 2px solid $primary-color;
+      justify-content: center;
+      border-bottom: none;
       padding: 1%;
       margin: 1%;
 
@@ -182,7 +219,6 @@ header {
   }
 
   .hero {
-    margin-top: .5%;
     height: 300px;
   }
 
@@ -208,7 +244,8 @@ header {
   }
 
   .contact {
-    margin: 5% 10%;
-    max-width: 100%;
+    article {
+      margin: 0 10%;
+    }
   }
 }

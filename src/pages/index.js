@@ -5,40 +5,8 @@ import about from '../images/nmabout.jpeg'
 import ImageGallery from 'react-image-gallery'
 import {useWindowWidth} from '@react-hook/window-size'
 import logo from '../images/logo.png'
-
-import img1 from '../images/work-images/originals/nm1.jpeg'
-import img2 from '../images/work-images/originals/nm2.jpeg'
-import img3 from '../images/work-images/originals/nm3.jpeg'
-import img4 from '../images/work-images/originals/nm4.jpeg'
-import img5 from '../images/work-images/originals/nm5.jpeg'
-import smallImg1 from '../images/work-images/thumbnails/snm1.jpeg'
-import smallImg2 from '../images/work-images/thumbnails/snm2.jpeg'
-import smallImg3 from '../images/work-images/thumbnails/snm3.jpeg'
-import smallImg4 from '../images/work-images/thumbnails/snm4.jpeg'
-import smallImg5 from '../images/work-images/thumbnails/snm5.jpeg'
-
-const images = [
-  {
-    original: img1,
-    thumbnail: smallImg1
-  },
-  {
-    original: img2,
-    thumbnail: smallImg2
-  },
-  {
-    original: img3,
-    thumbnail: smallImg3
-  },
-  {
-    original: img4,
-    thumbnail: smallImg4
-  },
-  {
-    original: img5,
-    thumbnail: smallImg5
-  },
-]
+import images from '../data/workImages.js'
+import insta from '../images/instaclear.png'
 
 // markup
 const IndexPage = () => {
@@ -63,7 +31,7 @@ const IndexPage = () => {
         </nav>
       </header>
       <section className="hero">
-        <h2>Put something good here</h2>
+        <h2>Vintage European Car Repairs and Modifications</h2>
       </section>
       <section className="about" id="about-section">
         <img src={about} />
@@ -91,6 +59,14 @@ const IndexPage = () => {
         <p className="email"><a href="mailto:noahsportri@gmail.com">noahsportri@gmail.com</a></p>
       </article>
       </section>
+      <footer>
+        <a href="https://www.instagram.com/noahsport_ri/" target="_blank">
+        <img src={insta} />
+        </a>
+        <a href="https://goo.gl/maps/zWDDJNLcXy572vMY6" target="_blank">
+        <p>101 Dexter Rd, East Providence, RI 02914</p>
+        </a>
+      </footer>
     </main>
   )
 }
