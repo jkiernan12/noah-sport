@@ -1,9 +1,15 @@
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
 body {
   min-height: 100vh;
   width: 100%;
   background-color: rgb(251, 238, 223);
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
 }
 
 
@@ -61,6 +67,41 @@ header {
   h2 {
     color: white;
     text-align: center;
+  }
+
+}
+
+.about {
+  display: flex;
+  align-items: flex-start;
+  margin: 10%;
+
+  img {
+    width: 50%;
+  }
+
+  article {
+    margin: 1% 5%;
+    width: 100%;
+
+    h3 {
+      border-bottom:2px solid rgb(162, 17, 17);
+      width: 80%;
+    }
+  }
+}
+
+.work {
+  margin: 10%;
+  display: flex;
+
+  article {
+    max-width: 30%;
+    margin: 1% 5%;
+  }
+  h3 {
+    border-bottom:2px solid rgb(162, 17, 17);
+    width: 60%;
   }
 
 }
