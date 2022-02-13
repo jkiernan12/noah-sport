@@ -1,5 +1,9 @@
 @import "~react-image-gallery/styles/scss/image-gallery.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
   width: 100%;
@@ -67,6 +71,7 @@ header {
   h2 {
     color: white;
     text-align: center;
+    font-size: 3em;
   }
 
 }
@@ -104,4 +109,23 @@ header {
     width: 60%;
   }
 
+}
+
+.contact {
+  max-width: 400px;
+  margin: 10% auto;
+
+  article {
+    margin: 2%;
+    
+    h3 {
+      border-bottom:2px solid rgb(162, 17, 17);
+      width: 60%;
+    }
+    
+    .email a {
+      color: rgb(162, 17, 17);
+      font-weight: bold;
+    }
+  }
 }
