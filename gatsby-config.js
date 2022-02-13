@@ -14,6 +14,6 @@ module.exports = {
     resolve: 'gatsby-plugin-web-font-loader',
     options: {
       google: {
-        families: ['Praise']
+        families: ['Praise', 'Abril Fatface']
       }}}]
 };

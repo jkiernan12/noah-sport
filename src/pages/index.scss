@@ -1,5 +1,8 @@
 @import "~react-image-gallery/styles/scss/image-gallery.scss";
 
+$primary-color: rgb(162, 17, 17);
+$decorative-font: 'Praise', serif;
+
 html {
   scroll-behavior: smooth;
 }
@@ -16,12 +19,18 @@ img {
   max-width: 100%;
 }
 
+h3 {
+  color: $primary-color;
+  font-family: $decorative-font;
+  font-size: 2.5em;
+  margin: 10px 0;
+}
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border-bottom:2px solid rgb(162, 17, 17);
+  border-bottom:2px solid $primary-color;
   width: 80%;
   margin: auto;
 
@@ -29,9 +38,8 @@ header {
 
     
     h1 {
-      color: rgb(162, 17, 17);
-      text-shadow: -2px 2px black;
-      font-family: 'Praise', serif;
+      color: $primary-color;
+      font-family: $decorative-font;
       text-align: center;
       font-size: 3em;
       margin: 0;
@@ -52,6 +60,7 @@ header {
       border: none;
       background-color: #00000000;
       cursor: pointer;
+      font-size: 1em;
     }
   }
 
@@ -90,7 +99,7 @@ header {
     width: 100%;
 
     h3 {
-      border-bottom:2px solid rgb(162, 17, 17);
+      border-bottom:2px solid $primary-color;
       width: 80%;
     }
   }
@@ -105,7 +114,7 @@ header {
     margin: 1% 5%;
   }
   h3 {
-    border-bottom:2px solid rgb(162, 17, 17);
+    border-bottom:2px solid $primary-color;
     width: 60%;
   }
 
@@ -119,13 +128,75 @@ header {
     margin: 2%;
     
     h3 {
-      border-bottom:2px solid rgb(162, 17, 17);
+      border-bottom: 2px solid $primary-color;
       width: 60%;
     }
     
     .email a {
-      color: rgb(162, 17, 17);
+      color: $primary-color;
       font-weight: bold;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: none;
+
+    .logo-container {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    nav {
+      border-top: 2px solid $primary-color;
+      padding: 1%;
+      margin: 1%;
+
+      button {
+        background-color: $primary-color;
+        color: white;
+      }
+      
+      a {
+        background-color: $primary-color;
+        margin: 1%;
+      }
+    }
+  }
+
+  .hero {
+    margin-top: .5%;
+    height: 300px;
+  }
+
+  .about {
+    flex-direction: column;
+
+    article {
+      margin: 0;
+    }
+    
+    img {
+      width: 100%;
+    }
+  }
+
+  .work {
+    flex-direction: column-reverse;
+
+    article, .slider {
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+
+  .contact {
+    margin: 5% 10%;
+    max-width: 100%;
   }
 }
