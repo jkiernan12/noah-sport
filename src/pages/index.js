@@ -48,7 +48,7 @@ const IndexPage = () => {
         <ImageGallery 
         className="slider" 
         items={images} 
-        thumbnailPosition={windowWidth > 600 ? 'right' : 'bottom'}
+        thumbnailPosition={'bottom'}
         showThumbnails={windowWidth > 600}
         showPlayButton={false} />
       </section>
