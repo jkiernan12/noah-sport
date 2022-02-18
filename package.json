@@ -17,6 +17,7 @@
   "dependencies": {
     "@react-hook/window-size": "^3.0.7",
     "gatsby": "^4.7.1",
+    "gatsby-background-image": "^1.6.0",
     "gatsby-plugin-image": "^2.7.0",
     "gatsby-plugin-sass": "^5.7.0",
     "gatsby-plugin-sharp": "^4.7.0",
@@ -24,6 +25,7 @@
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^4.7.0",
     "gatsby-transformer-sharp": "^4.7.0",
+    "netlify-cms-app": "^2.15.66",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-image-gallery": "^1.2.7",

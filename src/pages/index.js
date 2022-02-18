@@ -1,12 +1,13 @@
 import * as React from "react"
 import './index.scss'
-import Cover from '../images/cover.jpeg'
+import cover from '../images/cover.jpeg'
 import about from '../images/nmabout.jpeg'
 import ImageGallery from 'react-image-gallery'
 import {useWindowWidth} from '@react-hook/window-size'
 import logo from '../images/logo.png'
 import images from '../data/workImages.js'
 import insta from '../images/instaclear.png'
+import BackgroundImage from 'gatsby-background-image'
 
 // markup
 const IndexPage = () => {
@@ -67,6 +68,17 @@ const IndexPage = () => {
         <p>101 Dexter Rd, East Providence, RI 02914</p>
         </a>
       </footer>
+      <script>
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", user => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
+          })
+        }
+      </script>
     </main>
   )
 }
