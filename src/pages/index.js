@@ -9,6 +9,7 @@ import logo from '../images/logo.png'
 import images from '../data/workImages.js'
 import insta from '../images/instaclear.png'
 import BackgroundImage from 'gatsby-background-image'
+import content from '../../site/content.json'
 
 // markup
 const IndexPage = () => {
@@ -45,19 +46,19 @@ const IndexPage = () => {
         </nav>
       </header>
       <section className="hero">
-        <h2>Vintage European Car Repairs and Modifications</h2>
+        <h2>{content.title}</h2>
       </section>
       <section className="about" id="about-section">
         <img src={about} />
         <article>
           <h3>About</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum luctus turpis in aliquet. Morbi accumsan dui vitae ligula dignissim volutpat. Duis euismod nibh vel nisi rutrum dictum. Fusce sit amet nulla ligula. Morbi rutrum malesuada dolor ac rutrum.</p>
+          <p>{content.intro}</p>
         </article>
       </section>
       <section className="work" id="work-section">
       <article>
       <h3>Work</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum luctus turpis in aliquet. Morbi accumsan dui vitae ligula dignissim volutpat. Duis euismod nibh vel nisi rutrum dictum. Fusce sit amet nulla ligula. Morbi rutrum malesuada dolor ac rutrum.</p>
+      <p>{content.work}</p>
       </article>
         <ImageGallery 
         className="slider" 
@@ -69,7 +70,7 @@ const IndexPage = () => {
       <section className="contact" id="contact-section">
       <article>
         <h3>Contact</h3>
-        <p>If you have an old European car that needs anything from an oil change and check over to a mechanical rehabilitation to get back on the road send me an email and let’s make it happen!</p>
+        <p>{content.contact}</p>
         <p className="email"><a href="mailto:noahsportri@gmail.com">noahsportri@gmail.com</a></p>
       </article>
       </section>
