@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useEffect } from "react"
 import './index.scss'
 import cover from '../images/cover.jpeg'
 import about from '../images/nmabout.jpeg'
@@ -11,6 +12,18 @@ import BackgroundImage from 'gatsby-background-image'
 
 // markup
 const IndexPage = () => {
+  useEffect(() => {
+    if (window && window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      })
+    }
+  }, []);
+
   const windowWidth = useWindowWidth()
   return (
     <main>
