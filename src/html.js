@@ -23,7 +23,7 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
         <script>
-        if (window.netlifyIdentity) {
+        if (window && window.netlifyIdentity) {
           window.netlifyIdentity.on("init", user => {
             if (!user) {
               window.netlifyIdentity.on("login", () => {
